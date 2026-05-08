@@ -262,7 +262,7 @@ The price map reveals a distinct spatial premium along the Bosphorus corridor an
 
 To test whether the geographic distribution of unlicensed listings is statistically non-random, Global and Local Moran's I were computed using a spatial weights matrix derived directly from H3 hexagonal topology (k=1 neighbours, row-standardised). No administrative boundaries were used; the weights reflect pure geometric adjacency at the hexagonal grid level.
 
-**Spatial bandwidth sensitivity analysis** — to verify that the clustering result is not an artefact of the k=1 choice, Global Moran's I was recomputed for k=1, k=2, and k=3:
+**Spatial bandwidth sensitivity analysis**  to verify that the clustering result is not an artefact of the k=1 choice, Global Moran's I was recomputed for k=1, k=2, and k=3:
 
 | Bandwidth | Mean neighbours per cell | Moran's I | p-value |
 |---|---|---|---|
@@ -270,7 +270,7 @@ To test whether the geographic distribution of unlicensed listings is statistica
 | k=2 (two rings, ~2 km) | 10.6 | 0.1512 | 0.010 |
 | k=3 (three rings, ~3 km) | 19.8 | 0.1380 | 0.010 |
 
-Spatial clustering is statistically significant at all three bandwidths. The gradual decline in Moran's I as k increases is expected: wider neighbourhoods dilute local similarity by including more distant cells. The result is robust to bandwidth choice, confirming that k=1 was not an arbitrary selection.
+Spatial clustering is statistically significant at all three bandwidths. The gradual decline in Moran's I as k increases is expected: wider neighbourhoods dampen local similarity by including more distant cells. The result is robust to bandwidth choice, confirming that k=1 was not an arbitrary selection.
 
 | Variable | Moran's I | p-value (999 permutations) | Result |
 |---|---|---|---|
