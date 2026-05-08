@@ -250,19 +250,19 @@ The interactive map shows each of the 1,262 H3 cells at resolution 8 coloured by
 
 **Spatial pattern:** The lowest unlicensed rates are concentrated in the established tourist core: Beyoğlu (22.8%) and Fatih, which includes Sultanahmet (28.8%), are by far the most licensed districts. These areas have a high share of professional multi-listing operators and strong enforcement visibility. Beyond this core, unlicensed rates rise sharply and the pattern is not a simple centre-periphery gradient. Mid-ring districts on both sides of the Bosphorus show high unlicensed rates: Üsküdar (62.2%), Sarıyer (61.9%), and Kağıthane (60.5%) on the waterfront and inner fringe; outer suburban districts such as Çekmeköy (78.5%), Bayrampaşa (78.1%), and Avcılar (71.5%) show the highest rates. Notably, island and coastal resort areas (Adalar 27.9%, Şile 28.7%) also show low unlicensed rates despite their distance from the centre, consistent with a predominantly boutique and professionally managed listing stock. The overall pattern reflects host professionalism more than physical proximity to the city centre.
 
-*Open `Data/istanbul_compliance_map.html` in your browser to explore the interactive map.*
+👉 [Open interactive licensing map](https://eda-yilmaz.github.io/DI722_Istanbul_Airbnb/Data/istanbul_compliance_map.html)
 
 ### 6.3 Spatial Price Map
 
 The price map reveals a distinct spatial premium along the Bosphorus corridor and the historic peninsula, with nightly prices frequently exceeding 6,000 TRY. Peripheral districts show median prices below 1,500 TRY. Cells with low unlicensed rates (blue) tend to overlap with high-price (purple/red) cells, a visual pattern quantified formally in the regression results below.
 
-*Open `Data/istanbul_price_map.html` in your browser to explore the interactive map.*
+👉 [Open interactive price map](https://eda-yilmaz.github.io/DI722_Istanbul_Airbnb/Data/istanbul_price_map.html)
 
 ### 6.4 Spatial Autocorrelation: Moran's I
 
 To test whether the geographic distribution of unlicensed listings is statistically non-random, Global and Local Moran's I were computed using a spatial weights matrix derived directly from H3 hexagonal topology (k=1 neighbours, row-standardised). No administrative boundaries were used; the weights reflect pure geometric adjacency at the hexagonal grid level.
 
-**Spatial bandwidth sensitivity analysis**  to verify that the clustering result is not an artefact of the k=1 choice, Global Moran's I was recomputed for k=1, k=2, and k=3:
+**Spatial bandwidth sensitivity analysis** — to verify that the clustering result is not an artefact of the k=1 choice, Global Moran's I was recomputed for k=1, k=2, and k=3:
 
 | Bandwidth | Mean neighbours per cell | Moran's I | p-value |
 |---|---|---|---|
@@ -270,7 +270,7 @@ To test whether the geographic distribution of unlicensed listings is statistica
 | k=2 (two rings, ~2 km) | 10.6 | 0.1512 | 0.010 |
 | k=3 (three rings, ~3 km) | 19.8 | 0.1380 | 0.010 |
 
-Spatial clustering is statistically significant at all three bandwidths. The gradual decline in Moran's I as k increases is expected: wider neighbourhoods dampen local similarity by including more distant cells. The result is robust to bandwidth choice, confirming that k=1 was not an arbitrary selection.
+Spatial clustering is statistically significant at all three bandwidths. The gradual decline in Moran's I as k increases is expected: wider neighbourhoods dilute local similarity by including more distant cells. The result is robust to bandwidth choice, confirming that k=1 was not an arbitrary selection.
 
 | Variable | Moran's I | p-value (999 permutations) | Result |
 |---|---|---|---|
@@ -289,7 +289,7 @@ Local Moran's I (LISA) identified statistically significant spatial clusters at 
 
 The **41 HH Hot Spot cells** represent enforcement blind spots: compact geographic areas where high unlicensed rates are surrounded by equally high unlicensed rates, forming self-reinforcing clusters that a uniform city-wide enforcement strategy would systematically miss. The **82 LL Cold Spot cells** correspond to consistently licensed zones, most plausibly in the tourist core where enforcement visibility is highest.
 
-*Open `Data/istanbul_lisa_map.html` in your browser to explore the LISA cluster map.*
+👉 [Open interactive LISA cluster map](https://eda-yilmaz.github.io/DI722_Istanbul_Airbnb/Data/istanbul_lisa_map.html)
 
 ### 6.5 Baseline Regression Results
 
@@ -386,7 +386,7 @@ Licensed listings are booked at nearly **double the rate** of unlicensed ones (2
 
 The booking gap is not a linear trend but a **seasonal structure**. In shoulder and low season (October–May), the gap widens to 10–22 percentage points as unlicensed listings struggle to attract demand. In peak summer (June–September), high overall demand compresses the gap to ~8–9 points as even unlicensed listings fill up. This reveals a structural vulnerability: **unlicensed hosts are disproportionately dependent on peak-season demand** and face acute occupancy risk in off-peak periods. Combined with their price discount and enforcement risk, this pattern is consistent with gradual market exit over time, which would explain why 2025 new entrants show near-universal licensing.
 
-*Open `Data/istanbul_temporal_map.html` to explore how booking rate changes are distributed spatially across H3 cells.*
+👉 [Open interactive temporal booking map](https://eda-yilmaz.github.io/DI722_Istanbul_Airbnb/Data/istanbul_temporal_map.html)
 
 ## 7. Planned Extensions
 
