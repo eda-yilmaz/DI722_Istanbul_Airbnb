@@ -546,8 +546,6 @@ Project/
 ├── advanced_analysis.py               — Phase 2: GWR + panel regression (Sections 7.1–7.2)
 ├── mgwr_analysis.py                   — Phase 2: MGWR extension (Section 7.3)
 ├── Data/
-│   ├── listings.csv                   — Inside Airbnb raw data (Sep 2025)
-│   ├── calendar.csv.gz                — Daily availability data
 │   ├── istanbul_airbnb_h3.geojson     — H3 cells with stats + LISA clusters
 │   ├── istanbul_compliance_map.html   — Licensing map (unlicensed % per cell)
 │   ├── istanbul_price_map.html        — Interactive price map
